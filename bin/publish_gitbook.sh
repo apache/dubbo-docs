@@ -5,7 +5,7 @@ cd ..
 DEPLOY_DIR=`pwd`
 STATIC_TMP_DIR="~/gh-pages-tmp"
 
-if [ ! -d "~/gh-pages-tmp" ] ; then
+if [ ! -d ~/gh-pages-tmp ] ; then
     git clone -b gh-pages https://github.com/dubbo/dubbo-docs.git ~/gh-pages-tmp
 fi
 
@@ -24,7 +24,7 @@ gitbook build .
 cp -rf ./_book/*  ~/gh-pages-tmp/admin-guide
 rm -rf ./_book
 
-cd ~/dubbo-docs-gh-pages-tmp
+cd ~/gh-pages-tmp
 
 filelist=`ls -1`
   for filename in $filelist ; do
@@ -33,7 +33,7 @@ filelist=`ls -1`
         cp -rf ./$filename ~/gh-pages-tmp/
     elif [ -d $filename -a !$filename == "user-guide" -a !$filename == "developer-guide" -a !$filename == "admin-guide"] ; then
        cp -rf $filename/*  ~/gh-pages-tmp/
-  done
+done
 
 #git add .
 #git commit -m 'MISC:auto publish'
