@@ -27,17 +27,18 @@ rm -rf ./_book
 cd ~/gh-pages-tmp
 
 filelist=`ls -1`
-  for filename in $filelist ; do
-    if [ -f $filename ] ; then
-        echo "Filename ":$filename
-        cp -rf ./$filename ~/gh-pages-tmp/
-    elif [ -d $filename -a !$filename == "user-guide" -a !$filename == "developer-guide" -a !$filename == "admin-guide"] ; then
-       cp -rf $filename/*  ~/gh-pages-tmp/
+for filename in $filelist ; do
+if [ -f "$filename" ] ; then
+    echo $filename
+    cp -rf ./$filename ~/gh-pages-tmp/
+elif [ -d "$filename" ] && [ ! "$filename" == "user-guide" -a ! "$filename" == "developer-guide" -a ! "$filename" == "admin-guide" ] ; then
+   cp -rf ./$filename  ~/gh-pages-tmp/
+fi
 done
 
-#git add .
-#git commit -m 'MISC:auto publish'
-#git push -u origin gh-pages
+git add .
+git commit -m 'MISC:auto publish'
+git push -u origin gh-pages
 
-#cd ~
-#rm -rf ~/dubbo-docs-gh-pages-tmp
+cd ~
+rm -rf ~/dubbo-docs-gh-pages-tmp
