@@ -6,33 +6,33 @@ DEPLOY_DIR=`pwd`
 STATIC_TMP_DIR="~/gh-pages-tmp"
 
 if [ ! -d ~/gh-pages-tmp ] ; then
-    git clone -b gh-pages https://github.com/dubbo/dubbo-docs.git ~/gh-pages-tmp
+    git clone -b gh-pages https://github.com/dubbo/dubbo-docs.git $STATIC_TMP_DIR
 fi
 
 cd $DEPLOY_DIR/user-guide
 gitbook build .
-cp -rf ./_book/*  ~/gh-pages-tmp/user-guide
+cp -rf ./_book/*  $STATIC_TMP_DIR/user-guide
 rm -rf ./_book
 
 cd $DEPLOY_DIR/developer-guide
 gitbook build .
-cp -rf ./_book/*  ~/gh-pages-tmp/developer-guide
+cp -rf ./_book/*  $STATIC_TMP_DIR/developer-guide
 rm -rf ./_book
 
 cd $DEPLOY_DIR/admin-guide
 gitbook build .
-cp -rf ./_book/*  ~/gh-pages-tmp/admin-guide
+cp -rf ./_book/*  $STATIC_TMP_DIR/admin-guide
 rm -rf ./_book
 
-cd ~/gh-pages-tmp
+cd $STATIC_TMP_DIR
 
 filelist=`ls -1`
 for filename in $filelist ; do
 if [ -f "$filename" ] ; then
     echo $filename
-    cp -rf ./$filename ~/gh-pages-tmp/
+    cp -rf ./$filename $STATIC_TMP_DIR/
 elif [ -d "$filename" ] && [ ! "$filename" == "user-guide" -a ! "$filename" == "developer-guide" -a ! "$filename" == "admin-guide" ] ; then
-   cp -rf ./$filename  ~/gh-pages-tmp/
+   cp -rf ./$filename  $STATIC_TMP_DIR/
 fi
 done
 
@@ -41,4 +41,4 @@ git commit -m 'MISC:auto publish'
 git push -u origin gh-pages
 
 cd ~
-rm -rf ~/dubbo-docs-gh-pages-tmp
+rm -rf $STATIC_TMP_DIR
