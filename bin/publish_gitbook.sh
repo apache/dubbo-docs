@@ -11,16 +11,25 @@ fi
 
 cd $DEPLOY_DIR/user-guide
 gitbook build .
+if [ ! -d "$STATIC_TMP_DIR/user-guide" ] ; then
+    mkdir $STATIC_TMP_DIR/user-guide
+fi
 cp -rf ./_book/*  $STATIC_TMP_DIR/user-guide
 rm -rf ./_book
 
 cd $DEPLOY_DIR/developer-guide
 gitbook build .
+if [ ! -d "$STATIC_TMP_DIR/developer-guide" ] ; then
+    mkdir $STATIC_TMP_DIR/developer-guide
+fi
 cp -rf ./_book/*  $STATIC_TMP_DIR/developer-guide
 rm -rf ./_book
 
 cd $DEPLOY_DIR/admin-guide
 gitbook build .
+if [ ! -d "$STATIC_TMP_DIR/admin-guide" ] ; then
+    mkdir $STATIC_TMP_DIR/admin-guide
+fi
 cp -rf ./_book/*  $STATIC_TMP_DIR/admin-guide
 rm -rf ./_book
 
@@ -38,7 +47,7 @@ done
 
 git add .
 git commit -m 'MISC:auto publish'
-git push -u origin gh-pages
+git push -u origin master
 
 cd ~
 rm -rf $STATIC_TMP_DIR
