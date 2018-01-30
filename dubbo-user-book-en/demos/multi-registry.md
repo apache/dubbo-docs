@@ -2,7 +2,7 @@
 
 Dubbo supports the same service to register multiple registries, or different services were registered to different registries, or even reference the same name service from different registries. In addition, the registry supports custom extensions [^1]。
 
-## Service register to multiple registries
+## One service register to multiple registries
 
 For example: Alibaba some services are not deployed in Qingdao, only deployed in Hangzhou. While other applications in Qingdao need to reference this service, you can register your services to both registries at the same time.
 
@@ -80,4 +80,4 @@ When testing, the service needs to be temporarily register to two registries, wh
 </beans>
 ```
 
-[^1]: custom registry, see：[registry extension](https://dubbo.gitbooks.io/dubbo-dev-book/content/impls/registry.html)
+[^1]: custom registry, see：[registry extension](http://dubbo.io/books/dubbo-dev-book-en/impls/registry.html)

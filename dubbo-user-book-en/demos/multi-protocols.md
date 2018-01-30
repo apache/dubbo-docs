@@ -2,7 +2,7 @@
 
 Dubbo allows you to configure multiple protocols, support different protocols on different services, or support multiple protocols on the same service.
 
-## Different services configure different protocols
+## Every service export to one specific protocol separately
 
 Different protocol performance is not the same. Such as big data should use short connection protocol, small data and concurrent should use long connection protocol.
 
@@ -24,7 +24,7 @@ Different protocol performance is not the same. Such as big data should use shor
 </beans>
 ```
 
-## Service exposes multiple protocols
+## One service export to several protocols
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -42,4 +42,4 @@ Different protocol performance is not the same. Such as big data should use shor
 </beans>
 ```
 
-[^1]: custom protocol, see:[protocol extension](https://dubbo.gitbooks.io/dubbo-dev-book/content/impls/protocol.html)
+[^1]: custom protocol, see:[protocol extension](http://dubbo.io/books/dubbo-dev-book-en/impls/protocol.html)

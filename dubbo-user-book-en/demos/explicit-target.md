@@ -20,9 +20,7 @@ Add the -D parameter mapping service address to the JVM startup parameters：
 java -Dcom.alibaba.xxx.XxxService=dubbo://localhost:20890
 ```
 
-## 通过文件映射
-
-## Configure with the resolve file.
+## Configure with the `.properties` file
 
 If you have more services, you can also use file mapping to specify the mapping file path with `-Ddubbo.resolve.file`. This configuration takes precedence over the configuration in` <dubbo: reference> `, for example:
 

@@ -32,7 +32,7 @@ dubbo.registry.address=10.20.153.10:9090
 
 Priorities from high to low:
 
-* JVM -D parameters, you can easily override configuration when deploying or starting applications, e.g., change the port of dubbo protocol。
+* JVM -D parameters, you can easily override configuration when deploying or starting applications, e.g., change the port of dubbo protocol.
 
 * XML, the properties present in XML will override that in dubbo.properties.
 

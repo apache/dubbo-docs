@@ -51,4 +51,4 @@ Specify the merge method, it will call the return type's method for merging, the
 ```
 
 [^1]: since `2.1.0` began to support
-[^2]: See also：[merger extensions](https://dubbo.gitbooks.io/dubbo-dev-book/content/impls/merger.html)
+[^2]: See also：[merger extensions](http://dubbo.io/books/dubbo-user-book-en/demos/group-merger.html)

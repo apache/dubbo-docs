@@ -1,5 +1,5 @@
 # Summary
-* [1 Index](./preface/index.md)
+* [1 Preface](./preface/index.md)
     * [1.1 Background](./preface/background.md)
     * [1.2 Requirements](./preface/requirements.md)
     * [1.3 Architecture](./preface/architecture.md)

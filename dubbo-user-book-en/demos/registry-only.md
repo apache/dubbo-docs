@@ -1,4 +1,4 @@
-# Only registered
+# Register only
 
 You have two mirroring environments, two registries. 
 You have deployed one service at only one of the registries, another registries have not had time to deploy, and other applications at both registries need to rely on the service. 

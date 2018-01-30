@@ -1,4 +1,4 @@
-Static Service
+# Static Service
 
 * Sometimes we want to manually manage the registration and deregistration for service provider, we need to set registry to non-dynamoic mode. 
 

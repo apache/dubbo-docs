@@ -73,5 +73,5 @@ It is recommended that the provider set a timeout for every service, because the
 
 Theoretically, almost all configuration items supported in ReferenceConfig can be configured with a default value using ConsumerConfig, ServiceConfig, ProviderConfig.
 
-1: Requires spring `2.1.0+`, see announcement for details：`xmlns:p="http://www.springframework.org/schema/p"`  
+1: Requires spring `3.2.16+`, see announcement for details：`xmlns:p="http://www.springframework.org/schema/p"`  
 2: The reference bean obeys lazy init by default, only if it is refered by other beans or other instance try to get its instance using `getBean()` method  will the reference be initialized. If you need eager init, config this way: `<dubbo:reference ... init="true" />`

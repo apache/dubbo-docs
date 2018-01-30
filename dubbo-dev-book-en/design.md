@@ -9,7 +9,7 @@ Image description:
 * Left area with light blue background shows service consumer interfaces, Right area with light green background shows service provider interfaces, center area shows both side interfaces.
 * The image is divided into 10 layers from the bottom to the top, and the layers are one-way dependence. The black arrow on the right represents the dependency between layers, and each layer can be stripped from the upper layer to be reused, the Service and Config layers are API, and the other layers are SPI.
 * Green boxes are extension interfaces, blue boxes are implementation classes, image only shows implementation class of associated layers.
-* The blue dashed line is the initialization process, which is wassembly chain when starting, red line for the method call process, which is calling chain when running, purple triangle arrow is inherited, can treat subclass as the same node of parent class, text of lines are the method invocation.
+* The blue dashed line is the initialization process, which is assembly chain when starting, red line for the method call process, which is calling chain when running, purple triangle arrow is inherited, can treat subclass as the same node of parent class, text of lines are the method invocation.
 
 ## Layer description
 

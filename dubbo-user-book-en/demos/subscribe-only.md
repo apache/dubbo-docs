@@ -1,4 +1,4 @@
-# subscribe-only
+# Subscribe only
 
 To facilitate the development of tests, it is common to have a registry of all services available in develop environment.And the registration of a service provider under development may affect consumers' inability to run.
 

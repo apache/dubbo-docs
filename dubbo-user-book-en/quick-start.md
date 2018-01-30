@@ -3,11 +3,11 @@
 
 Dubbo uses a full Spring configuration, transparent access application,No API intrusion to your application,Just load the Dubbo configuration with Spring,Dubbo is loaded on the spring based schema extension.
 
-If you don't want to use the Spring configuration, you can call it by [the way of API] (../configuration/api.md) .
+If you don't want to use the Spring configuration, you can call it by [the way of API](../configuration/api.md).
 
 ## Service provider
 
-Complete installation steps, see：[Provider demo installation](https://dubbo.gitbooks.io/dubbo-admin-book/install/provider-demo.html)
+Complete installation steps, see：[Provider demo installation](http://dubbo.io/books/dubbo-admin-book-en/install/provider-demo.html)
 
 ### Defining service interfaces
 
@@ -84,7 +84,7 @@ public class Provider {
 
 ## Service consumer
 
-Complete installation steps, see : [Consumer demo installation](https://dubbo.gitbooks.io/dubbo-admin-book/install/consumer-demo.html)
+Complete installation steps, see : [Consumer demo installation](http://dubbo.io/books/dubbo-admin-book-en/install/consumer-demo.html)
 
 ### Using the Spring configuration to reference a remote service 
 

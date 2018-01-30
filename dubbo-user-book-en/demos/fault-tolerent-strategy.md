@@ -14,11 +14,11 @@ The relationship between nodes:
 
 ## Cluster fault-tolerant mode
 
-You can expand the cluster fault tolerance strategy, see:[Cluster expansion](https://dubbo.gitbooks.io/dubbo-dev-book/impls/cluster.html)
+You can expand the cluster fault tolerance strategy, see:[Cluster expansion](http://dubbo.io/books/dubbo-dev-book-en/impls/cluster.html)
 
 ## Failover Cluster
 
-Failure automatically switch, when there is failure, retry the other server (default). Usually used for read operations, but retries can result in longer delays. The times of retries can be set via `retries =" 2 "` (excluding the first time).
+Failure automatically switch, when there is failure, retry the other server (default). Usually used for read operations, but retries can result in longer delays. The times of retries can be set via `retries =2` (excluding the first time).
 
 The times of retries is configured as follows:
 
@@ -54,7 +54,7 @@ Failure automatically restored, failed to record the background request, regular
 
 ### Forking Cluster
 
-Multiple servers are invoked in parallel, returning as soon as one succeeds. Usually used for real-time demanding read operations, but need to waste more service resources. The maximum number of parallelism can be set with `forks =" 2 "`.
+Multiple servers are invoked in parallel, returning as soon as one succeeds. Usually used for real-time demanding read operations, but need to waste more service resources. The maximum number of parallelism can be set with `forks=2`.
 
 ### Broadcast Cluster
 
