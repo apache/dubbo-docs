@@ -10,7 +10,7 @@
 
 0. Configure in `dubbo.properties`
 
-    ```
+    ```properties
     dubbo.application.logger=log4j
     ```
 
@@ -20,4 +20,4 @@
     <dubbo:application logger="log4j" />
     ```
 
-[^1]: Custom Extensions[logger-adapter](https://dubbo.gitbooks.io/dubbo-dev-book/content/impls/logger-adapter.html)
+[^1]: Custom Extensions[logger-adapter](http://dubbo.io/books/dubbo-dev-book-en/impls/logger-adapter.html)

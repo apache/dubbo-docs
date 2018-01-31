@@ -40,22 +40,22 @@ Routing rules based on conditional expressions, such as：`host = 10.20.153.10 =
 
 Parameter Support：
 
-* Service call information, such as ：method, argument etc. Parameter routing is currently not supported
-* URL field (On URL own), such as ：protocol, host, port etc.
-* All parameters on the URL. such as ：application, organization etc.
+* Service call information, such as: method, argument etc. Parameter routing is currently not supported
+* URL field (On URL own), such as: protocol, host, port etc.
+* All parameters on the URL. such as: application, organization etc.
 
 Condition Support：
 
-* Equal sign `=` indicates match. such as ：`host = 10.20.153.10`
-* Not equal sign `! =` indicates "does not match". such as: `host != 10.20.153.10`.
+* Equal sign `=` indicates match. such as: `host = 10.20.153.10`
+* Not equal sign `!=` indicates "does not match". such as: `host != 10.20.153.10`.
 
 Value Support：
 
 * Separate multiple values with a comma `,` .  Such as：`host != 10.20.153.10,10.20.153.11`
 * End with  `*` to indicate wildcard.  Such as： `host != 10.20.*`
-* Start with `$` to indicate reference to consumer parameters. Such as ：`host = $host`
+* Start with `$` to indicate reference to consumer parameters. Such as: `host = $host`
 
-### Sample：
+### Samples
 
 0. Exclude pre-release machine：
 

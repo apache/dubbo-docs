@@ -1,4 +1,4 @@
-# token-authorization
+# Token Authorization
 
 
 Through the token authorization control center at the registry to decide whether to issue tokens to consumers, you can prevent consumers from bypassing the registry access provider, another through the registry can flexibly change the authorization without modification or upgrade provider

@@ -1,6 +1,6 @@
 # Event Notify
 
-Before calling, after calling, when an exception occurs,will trigger `oninvoke`、`onreturn`、`onthrow` events.You can configure which method to notify when an event occurs.
+Before calling, after calling, when an exception occurs,will trigger `oninvoke`, `onreturn`, `onthrow` events.You can configure which method to notify when an event occurs.
 
 ## Service Interface
 
@@ -66,9 +66,7 @@ class NotifyImpl implements Notify {
 ```
 `callback` and` async` functions are orthogonally decomposed. `async = true` means that the result is returned immediately.` onreturn` means that a callback is required.
 
-两者叠加存在以下几种组合情况 [^2]：
-
-There are several situations with the tow attributes.
+There are several situations with the tow attributes[^2].
 
 * Asynchronous callback mode:`async=true onreturn="xxx"`  
 * Synchronous callback mode:`async=false onreturn="xxx"`  

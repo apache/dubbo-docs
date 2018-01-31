@@ -4,7 +4,7 @@ The service container is a standalone launcher because the backend service does 
 
 The service container is just a simple Main method and loads a simple Spring container to expose the service.
 
-The content of Service container can be extended, built-in spring, jetty, log4j etc..  This can be expanded with [Container Extension Points] (https://dubbo.gitbooks.io/dubbo-dev-book/content/impls/container.html). Configure it with the -D parameter in the java command or `dubbo.properties`.
+The content of Service container can be extended, built-in spring, jetty, log4j etc..  This can be expanded with [Container Extension Points](http://dubbo.io/books/dubbo-dev-book-en/impls/container.html). Configure it with the -D parameter in the java command or `dubbo.properties`.
 
 ## Container type
 
@@ -19,19 +19,19 @@ dubbo.spring.config=classpath*:META-INF/spring/*.xml
 ### Jetty Container
 
 * Start an embedded Jetty for reporting status.
-* Configure：
-    * `dubbo.jetty.port=8080`：  configure jetty start up port
-    * `dubbo.jetty.directory=/foo/bar`：  static file that can be visited by jetty directly.
-    * `dubbo.jetty.page=log,status,system`：  configure the displayed page, loading all pages by default
+* Configure:
+    * `dubbo.jetty.port=8080`: configure jetty start up port
+    * `dubbo.jetty.directory=/foo/bar`: static file that can be visited by jetty directly.
+    * `dubbo.jetty.page=log,status,system`: configure the displayed page, loading all pages by default
 
 
 ### Log4j Container
 
 * Automatic configuration log4j configuration. At the start of the multi-process, log files automatically by process sub-directory.
-* Configure：
-    * `dubbo.log4j.file=/foo/bar.log`： configure log file path
-    * `dubbo.log4j.level=WARN`： configure log level
-    * `dubbo.log4j.subdirectory=20880`： configure log sub directory for multi-process startup and avoiding conflict
+* Configure:
+    * `dubbo.log4j.file=/foo/bar.log`: configure log file path
+    * `dubbo.log4j.level=WARN`: configure log level
+    * `dubbo.log4j.subdirectory=20880`: configure log sub directory for multi-process startup and avoiding conflict
 
 ## Container startup
 

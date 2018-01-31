@@ -47,7 +47,7 @@
     * [6.32 Token authorization](./demos/token-authorization.md)
     * [6.33 Routing rule](./demos/routing-rule.md)
     * [6.34 Configuration rule](./demos/config-rule.md)
-    * [6.35 Service downgrade](./demos/service-downgrade.md)
+    * [6.35 Service downgrade](./demos/service-donwngrade.md)
     * [6.36 Graceful shutdown](./demos/graceful-shutdown.md)
     * [6.37 Hostname binding ](./demos/hostname-binding.md)
     * [6.38 Logger strategy](./demos/logger-strategy.md)

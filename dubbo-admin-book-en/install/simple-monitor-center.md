@@ -89,5 +89,5 @@ Simple Monitor use disk to store statistics information, please focus on the lim
 
 Charts directory must be in `jetty.directory`, or it can not be accessed by web page.
 
-[^1]: Please refer to [Telnet command reference manual](https://dubbo.gitbooks.io/dubbo-user-book/content/references/telnet.html)
+[^1]: Please refer to [Telnet command reference manual](http://dubbo.io/books/dubbo-user-book-en/references/telnet.html)
 

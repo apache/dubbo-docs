@@ -6,5 +6,5 @@
     * [1.5 install Simple configuration center](install/simple-registry-center.md)
     * [1.6 install Simple monitor center](install/simple-monitor-center.md)
     * [1.7 install admin console](install/admin-console.md)
-* [2 Ops manual](ops/introduction.md)
+* [2 Ops manual]()
     * [2.1 admin-console Ops](ops/dubbo-ops.md)

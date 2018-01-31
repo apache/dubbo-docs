@@ -2,7 +2,7 @@
 
 ## Example of configuration
 
-### Example 1: Control the concurrency of all method for a specified service interface at server-side
+* Example 1: Control the concurrency of all method for a specified service interface at server-side
 
 Limit each method of `com.foo.BarService` to no more than 10 concurrent server-side executions (or take up thread pool threads):
 
@@ -10,7 +10,7 @@ Limit each method of `com.foo.BarService` to no more than 10 concurrent server-s
 <dubbo:service interface="com.foo.BarService" executes="10" />
 ```
 
-### Example 2: Control the concurrency of specified method for a specified service interface at server-side
+* Example 2: Control the concurrency of specified method for a specified service interface at server-side
 
 Limit the `sayHello` method of `com.foo.BarService` to no more than 10 concurrent server-side executions(or take up thread pool threads):
 
@@ -20,7 +20,7 @@ Limit the `sayHello` method of `com.foo.BarService` to no more than 10 concurren
 </dubbo:service>
 ```
 
-### Example 3: Control the concurrency of all method for a specified service interface at client-side
+* Example 3: Control the concurrency of all method for a specified service interface at client-side
 Limit each method of `com.foo.BarService` to no more than 10 concurrent client-side executions (or take up thread pool threads):
 ```xml
 <dubbo:service interface="com.foo.BarService" actives="10" />
@@ -30,7 +30,7 @@ OR
 <dubbo:reference interface="com.foo.BarService" actives="10" />
 ```
 
-### Example 4: Control the concurrency of specified method for a specified service interface at client-side
+* Example 4: Control the concurrency of specified method for a specified service interface at client-side
 Limit the `sayHello` method of `com.foo.BarService` to no more than 10 concurrent client-side executions(or take up thread pool threads):
 ```xml
 <dubbo:service interface="com.foo.BarService">
@@ -46,7 +46,7 @@ OR
 </dubbo:service>
 ```
 
-If `<dubbo: service>` and `<dubbo: reference>` are both configured with `actives`,`<dubbo:reference>` is preferred.Ref to:[Configuration coverage strategy](user-guide-configuration#配置覆盖)。
+If `<dubbo:service>` and `<dubbo:reference>` are both configured with `actives`,`<dubbo:reference>` is preferred.Ref to:[Configuration coverage strategy](./config-rule.md).
 
 ## Load Balance
 You can config the `loadbalance` attribute with `leastactive` at server-side or client-side,then the framework will make consumer call the minimum number of concurrent one.
