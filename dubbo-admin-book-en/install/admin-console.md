@@ -9,8 +9,13 @@ wget http://apache.etoak.com/tomcat/tomcat-6/v6.0.35/bin/apache-tomcat-6.0.35.ta
 tar zxvf apache-tomcat-6.0.35.tar.gz
 cd apache-tomcat-6.0.35
 rm -rf webapps/ROOT
-wget http://code.alibabatech.com/mvn/releases/com/alibaba/dubbo-admin/2.4.1/dubbo-admin-2.4.1.war
-unzip dubbo-admin-2.4.1.war -d webapps/ROOT
+
+git clone https://github.com/dubbo/dubbo-ops.git /var/tmp/dubbo-ops
+pushd /var/tmp/dubbo-ops
+mvn clean package
+popd
+
+unzip /var/tmp/dubbo-ops/dubbo-admin/target/dubbo-admin-2.0.0.war -d webapps/ROOT
 ```
 
 Configuration [^1]:
