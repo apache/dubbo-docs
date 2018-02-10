@@ -138,7 +138,7 @@ OK
 dubbo>offline
 OK
 
-//根据正则，上线部分服务
+//根据正则，下线部分服务
 dubbo>offline com.*
 OK
 ```
