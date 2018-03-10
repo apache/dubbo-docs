@@ -51,4 +51,4 @@
 ```
 
 [^1]: 从 `2.1.0` 版本开始支持
-[^2]: 参见：[合并结果扩展](https://dubbo.gitbooks.io/dubbo-dev-book/content/impls/merger.html)
+[^2]: 参见：[合并结果扩展](http://dubbo.io/books/dubbo-dev-book/impls/merger.html)

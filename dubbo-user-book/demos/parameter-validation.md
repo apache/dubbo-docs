@@ -180,4 +180,4 @@ public class ValidationConsumer {
 ```
 
 [^1]: 自 `2.1.0` 版本开始支持, 如何使用可以参考 [dubbo 项目中的示例代码](https://github.com/alibaba/dubbo/tree/master/dubbo-test/dubbo-test-examples/src/main/java/com/alibaba/dubbo/examples/validation)
-[^2]: 验证方式可扩展，扩展方式参见开发者手册中的[验证扩展](https://dubbo.gitbooks.io/dubbo-dev-book/content/impls/validation.html)
+[^2]: 验证方式可扩展，扩展方式参见开发者手册中的[验证扩展](http://dubbo.io/books/dubbo-dev-book/impls/validation.html)

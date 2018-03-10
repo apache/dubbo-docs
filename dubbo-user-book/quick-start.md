@@ -7,7 +7,7 @@ Dubbo 采用全 Spring 配置方式，透明化接入应用，对应用没有任
 
 ## 服务提供者
 
-完整安装步骤，请参见：[示例提供者安装](https://dubbo.gitbooks.io/dubbo-admin-book/install/provider-demo.html)
+完整安装步骤，请参见：[示例提供者安装](http://dubbo.io/books/dubbo-admin-book/install/provider-demo.html)
 
 ### 定义服务接口
 
@@ -84,7 +84,7 @@ public class Provider {
 
 ## 服务消费者
 
-完整安装步骤，请参见：[示例消费者安装](https://dubbo.gitbooks.io/dubbo-admin-book/install/consumer-demo.html)
+完整安装步骤，请参见：[示例消费者安装](http://dubbo.io/books/dubbo-admin-book/install/consumer-demo.html)
 
 ### 通过 Spring 配置引用远程服务
 
