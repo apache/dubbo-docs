@@ -13,7 +13,7 @@
 
 This repository only stores markdown sources, in order to be visited by users, it should be published everytime when there's an update. It will not be published automatically, so the committers need to publish mannually following rules below:
 
-* Publish to dubbo.io. You can find [the publish script](https://github.com/dubbo/dubbo.github.io/blob/master/script/deploy) stored in repo dubbo/dubbo.github.io, clone this repo and run the script, all resources will be published automatically to dubbo.io.
+* Publish to dubbo.io. You can find [the publish script](https://github.com/dubbo/dubbo.github.io/blob/master/script/deploy) stored in repo dubbo/dubbo.github.io(the official site), clone that repo and run the script, all resources will be published automatically to dubbo.io.
 * Publish to dubbo.gitbooks.io(only for english version). There's no publish script for this approach, what you need to do is merge the master branch to the corresponding branch. Because the gitbooks is watching the branches in this repo:gitbook-admin-en, gitbook-user-en, gitbook-dev-en, every change will be published automitically.
 
 
