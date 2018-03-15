@@ -132,6 +132,6 @@ function route(invokers) {
 ```
 
 [^1]: Support since `2.2.0`   
-[^2]: Routing Rules Extension Point: [Route Extension](http://dubbo.io/books/developer-guide-en/impls/router.html)   
+[^2]: Routing Rules Extension Point: [Route Extension](http://dubbo.io/books/dubbo-dev-book-en/impls/router.html)   
 [^3]: Note: A service can only have one whitelist rule, otherwise the two rules will be filtered out.  
 [^4]: Note: Scripts have no sandbox constraints, can execute arbitrary code, and poses a backdoor risk.  

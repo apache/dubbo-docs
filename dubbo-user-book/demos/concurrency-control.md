@@ -51,7 +51,7 @@
 </dubbo:service>
 ```
 
-如果 `<dubbo:service>` 和 `<dubbo:reference>` 都配了actives，`<dubbo:reference>` 优先，参见：[配置的覆盖策略](user-guide-configuration#配置覆盖)。
+如果 `<dubbo:service>` 和 `<dubbo:reference>` 都配了actives，`<dubbo:reference>` 优先，参见：[配置的覆盖策略](../configuration/xml.md#配置覆盖关系)。
 
 ## Load Balance 均衡
 
