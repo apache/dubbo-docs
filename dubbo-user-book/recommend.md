@@ -160,7 +160,7 @@ Dubbo 中所有的配置项都可以配置在 Spring 配置文件中，并且可
     <dubbo:reference interface="com.alibaba.xxx.XxxService" check="false" />
     ```
     
-[^1]: 配置的覆盖规则：1) 方法级配置别优于接口级别，即小 Scope 优先 2) Consumer 端配置优于 Provider 配置，优于全局配置，最后是Dubbo 硬编码的配置值（[Dubbo 配置参考手册](./configuration.md)）
+[^1]: 配置的覆盖规则：1) 方法级配置别优于接口级别，即小 Scope 优先 2) Consumer 端配置优于 Provider 配置，优于全局配置，最后是Dubbo 硬编码的配置值（[Dubbo 配置参考手册](./configuration/properties.md#覆盖策略)）
 [^2]: 表示加上第一次调用，会调用 3 次
 [^3]: 有多个 Provider 时，如何挑选 Provider 调用
 [^4]: 指从 Consume r端并发调用最好的 Provider，可以减少的反应慢的 Provider 的调用，因为反应更容易累积并发的调用

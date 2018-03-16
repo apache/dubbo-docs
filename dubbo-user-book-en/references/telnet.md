@@ -14,7 +14,7 @@ Or:
 echo status | nc -i 1 localhost 20880
 ```
 
-It is possible to extend command `status` to check more resources, pls. refer to [extension references](http://dubbo.io/developer-guide/SPI%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/%E7%8A%B6%E6%80%81%E6%A3%80%E6%9F%A5%E6%89%A9%E5%B1%95.html) for more details.
+It is possible to extend command `status` to check more resources, pls. refer to [extension references](http://dubbo.io/books/dubbo-dev-book-en/impls/status-checker.html) for more details.
 
 ## Supported Commands
 

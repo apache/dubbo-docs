@@ -15,7 +15,7 @@ echo status | nc -i 1 localhost 20880
 ```
 
 
-status命令所检查的资源也可以扩展，参见：[扩展参考手册](http://dubbo.io/developer-guide/SPI%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/%E7%8A%B6%E6%80%81%E6%A3%80%E6%9F%A5%E6%89%A9%E5%B1%95.html)。
+status命令所检查的资源也可以扩展，参见：[扩展参考手册](http://dubbo.io/books/dubbo-dev-book/impls/status-checker.html)。
 
 ## 命令
 
