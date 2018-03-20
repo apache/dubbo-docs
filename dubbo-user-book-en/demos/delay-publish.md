@@ -33,7 +33,7 @@ This will cause the getBean thread to lock the singletonObjects first, then lock
 
 1. It is highly recommended not to call applicationContext.getBean() in the service implementation class, all using Spring's beans using IoC injection.
 2. If you really want to tune getBean(), you can put the configuration of Dubbo Spring final loading.
-3. If you do not want to rely on the configuration order, you can use `<dubbo:provider deplay ="-1"/>` to make Dubbo expose the service after the Spring container has been initialized.
+3. If you do not want to rely on the configuration order, you can use `<dubbo:provider delay ="-1"/>` to make Dubbo expose the service after the Spring container has been initialized.
 4. If you use getBean() extensively, the equivalent of degenerating Spring to factory mode is to isolate Dubbo's service from a separate Spring container.
 
 [^1]: Base on the  `ContextRefreshedEvent` event of the  Spring to trigger publish service.
