@@ -5,13 +5,13 @@
 在 spring 配置文件中按以下方式配置：
 
 ```xml
-<dubbo:service interface="com.foo.BarService" mock="true" />
+<dubbo:reference interface="com.foo.BarService" mock="true" />
 ```
 
 或
 
 ```xml
-<dubbo:service interface="com.foo.BarService" mock="com.foo.BarServiceMock" />
+<dubbo:reference interface="com.foo.BarService" mock="com.foo.BarServiceMock" />
 ```
 
 在工程中提供 Mock 实现 [^2]：
@@ -40,7 +40,7 @@ try {
 请考虑改为 Mock 实现，并在 Mock 实现中 return null。如果只是想简单的忽略异常，在 `2.0.11` 以上版本可用：
 
 ```xml
-<dubbo:service interface="com.foo.BarService" mock="return null" />
+<dubbo:reference interface="com.foo.BarService" mock="return null" />
 ```
 
 [^1]: Mock 是 Stub 的一个子集，便于服务提供方在客户端执行容错逻辑，因经常需要在出现 RpcException (比如网络失败，超时等)时进行容错，而在出现业务异常(比如登录用户名密码错误)时不需要容错，如果用 Stub，可能就需要捕获并依赖 RpcException 类，而用 Mock 就可以不依赖 RpcException，因为它的约定就是只有出现 RpcException 时才执行。
