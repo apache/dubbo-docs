@@ -4,60 +4,17 @@
 安装:
 
 ```sh
-wget http://code.alibabatech.com/mvn/releases/com/alibaba/dubbo-demo-consumer/2.4.1/dubbo-demo-consumer-2.4.1-assembly.tar.gz
-tar zxvf dubbo-demo-consumer-2.4.1-assembly.tar.gz
-cd dubbo-demo-consumer-2.4.1
+git clone https://github.com/apache/incubator-dubbo.git
+cd incubator-dubbo
+运行 dubbo-demo-consumer中的com.alibaba.dubbo.demo.consumer.Consumer
+请确保先启动Provider
+如果使用Intellij Idea 请加上-Djava.net.preferIPv4Stack=true
 ```
 
 配置:
 
 ```sh
-vi conf/dubbo.properties
+resource/META-INFO.spring/dubbo-demo-consumer.xml
+修改其中的dubbo:registery，替换成Provider提供的注册中心地址
 ```
 
-启动:
-
-```sh
-./bin/start.sh
-tail -f logs/stdout.log
-```
-
-停止:
-
-```sh
-./bin/stop.sh
-```
-
-重启:
-
-```sh
-./bin/restart.sh
-```
-
-调试:
-
-```sh
-./bin/start.sh debug
-```
-
-系统状态:
-
-```sh
-./bin/dump.sh
-```
-
-总控入口:
-
-```sh
-./bin/server.sh start
-./bin/server.sh stop
-./bin/server.sh restart
-./bin/server.sh debug
-./bin/server.sh dump
-```
-
-标准输出:
-
-```sh
-tail -f logs/stdout.log
-```
