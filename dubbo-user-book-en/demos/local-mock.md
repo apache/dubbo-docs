@@ -5,13 +5,13 @@ Local mock [^1] is usually used for service downgrade, such as a verification se
 Configured in the spring configuration file as follows:
 
 ```xml
-<dubbo:service interface="com.foo.BarService" mock="true" />
+<dubbo:reference interface="com.foo.BarService" mock="true" />
 ```
 
 or
 
 ```xml
-<dubbo:service interface="com.foo.BarService" mock="com.foo.BarServiceMock" />
+<dubbo:reference interface="com.foo.BarService" mock="com.foo.BarServiceMock" />
 ```
 
 Mock implementation in the project [^2]：
@@ -40,7 +40,7 @@ try {
 Consider changing to Mock implementation and return null in Mock implementation. If you just want to simply ignore the exception, `2.0.11` version or later version is available:
 
 ```xml
-<dubbo:service interface="com.foo.BarService" mock="return null" />
+<dubbo:reference interface="com.foo.BarService" mock="return null" />
 ```
 
 [^1]: Mock is a subset of the Stub. If you use Stub, you may need to rely on the RpcException class. If you use Mock, you do not need to rely on RpcException, when throwing RpcException, it will callback Mock implementation class.
