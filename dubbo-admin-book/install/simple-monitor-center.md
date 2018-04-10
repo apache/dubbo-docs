@@ -5,9 +5,10 @@
 安装:
 
 ```sh
-wget http://code.alibabatech.com/mvn/releases/com/alibaba/dubbo-monitor-simple/2.4.1/dubbo-monitor-simple-2.4.1-assembly.tar.gz
-tar zxvf dubbo-monitor-simple-2.4.1-assembly.tar.gz
-cd dubbo-monitor-simple-2.4.1
+git clone https://github.com/apache/incubator-dubbo-ops
+cd incubator-dubbo-ops && mvn package
+cd dubbo-monitor-simple/target && tar xvf dubbo-monitor-simple-2.0.0-assembly.tar.gz
+cd dubbo-monitor-simple-2.0.0
 ```
 
 配置:
@@ -19,41 +20,41 @@ vi conf/dubbo.properties
 启动:
 
 ```sh
-./bin/start.sh
+./assembly.bin/start.sh
 ```
 
 停止:
 
 ```sh
-./bin/stop.sh
+./assembly.bin/stop.sh
 ```
 
 重启:
 
 ```sh
-./bin/restart.sh
+./assembly.bin/restart.sh
 ```
 
 调试:
 
 ```sh
-./bin/start.sh debug
+./assembly.bin/start.sh debug
 ```
 
 系统状态:
 
 ```sh
-./bin/dump.sh
+./assembly.bin/dump.sh
 ```
 
 总控入口:
 
 ```sh
-./bin/server.sh start
-./bin/server.sh stop
-./bin/server.sh restart
-./bin/server.sh debug
-./bin/server.sh dump
+./assembly.bin/server.sh start
+./assembly.bin/server.sh stop
+./assembly.bin/server.sh restart
+./assembly.bin/server.sh debug
+./assembly.bin/server.sh dump
 ```
 
 标准输出:

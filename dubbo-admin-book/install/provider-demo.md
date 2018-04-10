@@ -3,75 +3,16 @@
 安装：
 
 ```sh
-wget http://code.alibabatech.com/mvn/releases/com/alibaba/dubbo-demo-provider/2.4.1/dubbo-demo-provider-2.4.1-assembly.tar.gz
-tar zxvf dubbo-demo-provider-2.4.1-assembly.tar.gz
-cd dubbo-demo-provider-2.4.1
+git clone https://github.com/apache/incubator-dubbo.git
+cd incubator-dubbo
+运行 dubbo-demo-provider中的com.alibaba.dubbo.demo.provider.Provider
+如果使用Intellij Idea 请加上-Djava.net.preferIPv4Stack=true
 ```
 
 配置：
 
 ```sh
-vi conf/dubbo.properties
+resource/META-INFO.spring/dubbo-demo-provider.xml
+修改其中的dubbo:registery，替换成真实的注册中心地址，推荐使用zookeeper
 ```
 
-启动：
-
-```sh
-./bin/start.sh
-```
-
-停止：
-
-```sh
-./bin/stop.sh
-```
-
-重启：
-
-```sh
-./bin/restart.sh
-```
-
-调试：
-
-```sh
-./bin/start.sh debug
-```
-
-系统状态：
-
-```sh
-./bin/dump.sh
-```
-
-总控入口：
-
-```sh
-./bin/server.sh start
-./bin/server.sh stop
-./bin/server.sh restart
-./bin/server.sh debug
-./bin/server.sh dump
-```
-
-标准输出：
-
-```sh
-tail -f logs/stdout.log
-```
-
-命令行 [^1]：
-
-
-```sh
-telnet 127.0.0.1 20880
-help
-```
-
-或者：
-
-```sh
-echo status | nc -i 1 127.0.0.1 20880
-```
-
-[^1]: 请参考 [Telnet 命令参考手册](http://dubbo.io/books/dubbo-user-book/references/telnet.html)

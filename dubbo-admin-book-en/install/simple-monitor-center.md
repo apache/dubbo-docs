@@ -5,9 +5,10 @@
 install:
 
 ```sh
-wget http://code.alibabatech.com/mvn/releases/com/alibaba/dubbo-monitor-simple/2.4.1/dubbo-monitor-simple-2.4.1-assembly.tar.gz
-tar zxvf dubbo-monitor-simple-2.4.1-assembly.tar.gz
-cd dubbo-monitor-simple-2.4.1
+git clone https://github.com/apache/incubator-dubbo-ops
+cd incubator-dubbo-ops && mvn package
+cd dubbo-monitor-simple/target && tar xvf dubbo-monitor-simple-2.0.0-assembly.tar.gz
+cd dubbo-monitor-simple-2.0.0
 ```
 
 configuration:
@@ -19,41 +20,41 @@ vi conf/dubbo.properties
 start:
 
 ```sh
-./bin/start.sh
+./assembly.bin/start.sh
 ```
 
 stop:
 
 ```sh
-./bin/stop.sh
+./assembly.bin/stop.sh
 ```
 
 restart:
 
 ```sh
-./bin/restart.sh
+./assembly.bin/restart.sh
 ```
 
 debug:
 
 ```sh
-./bin/start.sh debug
+./assembly.bin/start.sh debug
 ```
 
 system status:
 
 ```sh
-./bin/dump.sh
+./assembly.bin/dump.sh
 ```
 
 General control entrance:
 
 ```sh
-./bin/server.sh start
-./bin/server.sh stop
-./bin/server.sh restart
-./bin/server.sh debug
-./bin/server.sh dump
+./assembly.bin/server.sh start
+./assembly.bin/server.sh stop
+./assembly.bin/server.sh restart
+./assembly.bin/server.sh debug
+./assembly.bin/server.sh dump
 ```
 
 Stdout:

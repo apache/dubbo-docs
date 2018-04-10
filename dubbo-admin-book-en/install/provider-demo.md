@@ -3,75 +3,15 @@
 install:
 
 ```sh
-wget http://code.alibabatech.com/mvn/releases/com/alibaba/dubbo-demo-provider/2.4.1/dubbo-demo-provider-2.4.1-assembly.tar.gz
-tar zxvf dubbo-demo-provider-2.4.1-assembly.tar.gz
-cd dubbo-demo-provider-2.4.1
+git clone https://github.com/apache/incubator-dubbo.git
+cd incubator-dubbo
+run com.alibaba.dubbo.demo.provider.Provider under dubbo-demo-provider module
+add -Djava.net.preferIPv4Stack=true if your IDE is Intellij Idea
 ```
 
 configuration:
 
 ```sh
-vi conf/dubbo.properties
+resource/META-INFO.spring/dubbo-demo-provider.xml
+change dubbo:registery to a real registery server address, zookeeper is recommanded
 ```
-
-start:
-
-```sh
-./bin/start.sh
-```
-
-stop:
-
-```sh
-./bin/stop.sh
-```
-
-restart:
-
-```sh
-./bin/restart.sh
-```
-
-Debug:
-
-```sh
-./bin/start.sh debug
-```
-
-System status:
-
-```sh
-./bin/dump.sh
-```
-
-General control entrance: 
-
-```sh
-./bin/server.sh start
-./bin/server.sh stop
-./bin/server.sh restart
-./bin/server.sh debug
-./bin/server.sh dump
-```
-
-Stdout:
-
-```sh
-tail -f logs/stdout.log
-```
-
-Command line [^1]:
-
-
-```sh
-telnet 127.0.0.1 20880
-help
-```
-
-Or:
-
-```sh
-echo status | nc -i 1 127.0.0.1 20880
-```
-
-[^1]: Please refer to [Telnet reference manual](http://dubbo.io/books/dubbo-user-book-en/references/telnet.html)

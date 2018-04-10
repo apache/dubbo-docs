@@ -4,60 +4,15 @@
 install:
 
 ```sh
-wget http://code.alibabatech.com/mvn/releases/com/alibaba/dubbo-demo-consumer/2.4.1/dubbo-demo-consumer-2.4.1-assembly.tar.gz
-tar zxvf dubbo-demo-consumer-2.4.1-assembly.tar.gz
-cd dubbo-demo-consumer-2.4.1
+git clone https://github.com/apache/incubator-dubbo.git
+cd incubator-dubbo
+Please start Provider first
+add -Djava.net.preferIPv4Stack=true if your IDE is Intellij Idea
 ```
 
 configuration:
 
 ```sh
-vi conf/dubbo.properties
-```
-
-start:
-
-```sh
-./bin/start.sh
-tail -f logs/stdout.log
-```
-
-Stop:
-
-```sh
-./bin/stop.sh
-```
-
-Restart:
-
-```sh
-./bin/restart.sh
-```
-
-Debug:
-
-```sh
-./bin/start.sh debug
-```
-
-System status:
-
-```sh
-./bin/dump.sh
-```
-
-General control entrance:
-
-```sh
-./bin/server.sh start
-./bin/server.sh stop
-./bin/server.sh restart
-./bin/server.sh debug
-./bin/server.sh dump
-```
-
-Stdout:
-
-```sh
-tail -f logs/stdout.log
+resource/META-INFO.spring/dubbo-demo-consumer.xml
+change dubbo:registery to the real registery center address
 ```
