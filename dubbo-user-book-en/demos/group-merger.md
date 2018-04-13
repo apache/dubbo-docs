@@ -2,7 +2,7 @@
 
 According to the group to invoke server and return the merge result [^1], such as the menu service, the same interface, but there are a variety of implementations, using group distinction, consumers call each group and get the results, the merger can merge the resules, so that you can achieve aggregation Menu Item.
 
-Related code can refer to [dubbo project example](https://github.com/alibaba/dubbo/tree/master/dubbo-test/dubbo-test-examples/src/main/java/com/alibaba/dubbo/examples/merge)
+Related code can refer to [dubbo project example](https://github.com/apache/incubator-dubbo/tree/master/dubbo-test/dubbo-test-examples/src/main/java/com/alibaba/dubbo/examples/merge)
 
 ## Configuration
 
@@ -51,4 +51,4 @@ Specify the merge method, it will call the return type's method for merging, the
 ```
 
 [^1]: since `2.1.0` began to support
-[^2]: See also：[merger extensions](http://dubbo.io/books/dubbo-user-book-en/demos/group-merger.html)
+[^2]: See also：[merger extensions](http://dubbo.apache.org/books/dubbo-user-book-en/demos/group-merger.html)

@@ -76,4 +76,4 @@ help
 echo status | nc -i 1 127.0.0.1 9090
 ```
 
-[^1]: 请参考 [Telnet 命令参考手册](http://dubbo.io/books/dubbo-user-book/references/telnet.html)
+[^1]: 请参考 [Telnet 命令参考手册](http://dubbo.apache.org/books/dubbo-user-book/references/telnet.html)
