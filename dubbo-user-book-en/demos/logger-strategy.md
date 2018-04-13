@@ -20,4 +20,4 @@
     <dubbo:application logger="log4j" />
     ```
 
-[^1]: Custom Extensions[logger-adapter](http://dubbo.io/books/dubbo-dev-book-en/impls/logger-adapter.html)
+[^1]: Custom Extensions[logger-adapter](http://dubbo.apache.org/books/dubbo-dev-book-en/impls/logger-adapter.html)
