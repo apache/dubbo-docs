@@ -7,7 +7,7 @@ Dubbo changes nothing of Zookeeper's server side, an original Zookeeper server i
 install:
 
 ```sh
-wget http://www.apache.org/dist//zookeeper/zookeeper-3.3.3/zookeeper-3.3.3.tar.gz
+wget http://archive.apache.org/dist/zookeeper/zookeeper-3.3.3/zookeeper-3.3.3.tar.gz
 tar zxvf zookeeper-3.3.3.tar.gz
 cd zookeeper-3.3.3
 cp conf/zoo_sample.cfg conf/zoo.cfg
