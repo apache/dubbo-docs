@@ -7,7 +7,7 @@ Dubbo 未对 Zookeeper 服务器端做任何侵入修改，只需安装原生的
 安装:
 
 ```sh
-wget http://www.apache.org/dist//zookeeper/zookeeper-3.3.3/zookeeper-3.3.3.tar.gz
+wget http://archive.apache.org/dist/zookeeper/zookeeper-3.3.3/zookeeper-3.3.3.tar.gz
 tar zxvf zookeeper-3.3.3.tar.gz
 cd zookeeper-3.3.3
 cp conf/zoo_sample.cfg conf/zoo.cfg
