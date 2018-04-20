@@ -17,6 +17,8 @@ registry.register(URL.valueOf("condition://0.0.0.0/com.foo.BarService?category=r
 * `condition://` 表示路由规则的类型，支持条件路由规则和脚本路由规则，可扩展，**必填**。
 * `0.0.0.0` 表示对所有 IP 地址生效，如果只想对某个 IP 的生效，请填入具体 IP，**必填**。
 * `com.foo.BarService` 表示只对指定服务生效，**必填**。
+* `group=foo` 对指定服务的指定group生效，不填表示对未配置group的指定服务生效
+* `version=1.0`对指定服务的指定version生效，不填表示对未配置version的指定服务生效
 * `category=routers` 表示该数据为动态配置类型，**必填**。
 * `dynamic=false` 表示该数据为持久数据，当注册方退出时，数据依然保存在注册中心，**必填**。
 * `enabled=true` 覆盖规则是否生效，可不填，缺省生效。
@@ -114,13 +116,13 @@ registry.register(URL.valueOf("condition://0.0.0.0/com.foo.BarService?category=r
 
 
 ```
-"script://0.0.0.0/com.foo.BarService?category=routers&dynamic=false&rule=" + URL.encode("function route(invokers) { ... } (invokers)")
+"script://0.0.0.0/com.foo.BarService?category=routers&dynamic=false&rule=" + URL.encode("（function route(invokers) { ... } (invokers)）")
 ```
 
 基于脚本引擎的路由规则，如：
 
 ```javascript
-function route(invokers) {
+（function route(invokers) {
     var result = new java.util.ArrayList(invokers.size());
     for (i = 0; i < invokers.size(); i ++) {
         if ("10.20.153.10".equals(invokers.get(i).getUrl().getHost())) {
@@ -128,7 +130,7 @@ function route(invokers) {
         }
     }
     return result;
-} (invokers); // 表示立即执行方法
+} (invokers)）; // 表示立即执行方法
 ```
 
 [^1]: `2.2.0` 以上版本支持
