@@ -17,6 +17,8 @@ registry.register(URL.valueOf("condition://0.0.0.0/com.foo.BarService?category=r
 * `condition://` It indicates the type of routing rules, supports routing rules and script routing rules, and can be extended. **Required**。
 * `0.0.0.0` It indicates that all IP addresses are valid. If you want to take effect for only one IP address, fill in the IP address. **Required**。
 * `com.foo.BarService` It indicates that the specified service is effective. **Required**。
+* `group=foo` It indicates that the specified service in specified group is effective. When absent, the specified service which dosen't configure group is effective.
+* `version=1.0`It indicates that the specified service in specified version is effective. When absent, the specified service which dosen't configure version is effective.
 * `category=routers` It indicates that the data is a dynamic configuration type. **Required**。
 * `dynamic=false` It indicates that it is persistent data. When the registrant exits, the data is still stored in the registry. **Required**。
 * `enabled=true` It indicates whether this routing rules is effective. Option, and default effective.
@@ -114,13 +116,13 @@ Script routing rules [^4] support all scripts of JDK script engine. such as: jav
 
 
 ```
-"script://0.0.0.0/com.foo.BarService?category=routers&dynamic=false&rule=" + URL.encode("function route(invokers) { ... } (invokers)")
+"script://0.0.0.0/com.foo.BarService?category=routers&dynamic=false&rule=" + URL.encode("(function route(invokers) { ... } (invokers))")
 ```
 
 Routing rules that base on script engine is as follow：
 
 ```javascript
-function route(invokers) {
+(function route(invokers) {
     var result = new java.util.ArrayList(invokers.size());
     for (i = 0; i < invokers.size(); i ++) {
         if ("10.20.153.10".equals(invokers.get(i).getUrl().getHost())) {
@@ -128,7 +130,7 @@ function route(invokers) {
         }
     }
     return result;
-} (invokers); // Indicates that the method is executed immediately
+} (invokers)); // Indicates that the method is executed immediately
 ```
 
 [^1]: Support since `2.2.0`   
