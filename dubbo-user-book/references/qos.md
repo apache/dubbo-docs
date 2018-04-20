@@ -10,13 +10,13 @@ dubbo 2.5.8 新版本重构了 telnet 模块，提供了新的 telnet 命令支�
 新版本的 telnet 端口 与 dubbo 协议的端口是不同的端口，默认为 `22222`，可通过配置文件`dubbo.properties` 修改:
 
 ```
-dubbo.qos.port=33333
+dubbo.application.qos.port=33333
 ```
 
 或者通过设置 JVM 参数:
 
 ```
--Ddubbo.qos.port=33333
+-Ddubbo.application.qos.port=33333
 ```
 
 ### 安全
@@ -24,13 +24,13 @@ dubbo.qos.port=33333
 默认情况下，dubbo 接收任何主机发起的命令，可通过配置文件`dubbo.properties` 修改:
 
 ```
-dubbo.qos.accept.foreign.ip=false
+dubbo.application.qos.accept.foreign.ip=false
 ```
 
 或者通过设置 JVM 参数:
 
 ```
--Ddubbo.qos.accept.foreign.ip=false
+-Ddubbo.application.qos.accept.foreign.ip=false
 ```
 
 拒绝远端主机发出的命令，只允许服务本机执行
@@ -125,7 +125,7 @@ OK
 
  - 当线上的 QPS 比较高的时候，当刚重启机器的时候，由于没有进行JIT 预热或相关资源没有预热，可能会导致大量超时，这个时候，可通过分批发布服务，逐渐加大流量
  - 当由于某台机器由于某种原因，需要下线服务，然后又需要重新上线服务
- 
+
 
 
 ### Offline 下线服务命令
