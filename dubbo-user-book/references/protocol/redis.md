@@ -35,7 +35,7 @@ registry.register(URL.valueOf("redis://10.20.153.11/com.foo.BarService?category=
 如果方法名和 redis 的标准方法名不相同，则需要配置映射关系 [^4]：
 
 ```xml
-<dubbo:reference id="cache" interface="com.foo.CacheService" url="memcached://10.20.153.10:11211" p:set="putFoo" p:get="getFoo" p:delete="removeFoo" />
+<dubbo:reference id="cache" interface="com.foo.CacheService" url="redis://10.20.153.10:6379" p:set="putFoo" p:get="getFoo" p:delete="removeFoo" />
 ```
 
 [^1]: [Redis](http://redis.io) 是一个高效的 KV 存储服务器
