@@ -73,7 +73,7 @@ dubbo支持多种远程调用方式，例如dubbo RPC（二进制序列化 + tcp
 
 特别值得指出的是，我们并不需要完全严格遵守REST的原始定义和架构风格。即使著名的Twitter REST API也会根据情况做适度调整，而不是机械的遵守原始的REST风格。
 
-> 附注：我们将这个功能称之为REST风格的远程调用，即RESTful Remoting（抽象的远程处理或者调用），而不是叫RESTful RPC（具体的远程“过程”调用），是因为REST和RPC本身可以被认为是两种不同的风格。在dubbo的REST实现中，可以说有两个面向，其一是提供或消费正常的REST服务，其二是将REST作为dubbo RPC体系中一种协议实现，而RESTful Remoting同时涵盖了这个面向。
+> 附注：我们将这个功能称之为REST风格的远程调用，即RESTful Remoting（抽象的远程处理或者调用），而不是叫RESTful RPC（具体的远程“过程”调用），是因为REST和RPC本身可以被认为是两种不同的风格。在dubbo的REST实现中，可以说有两个面向，其一是提供或消费正常的REST服务，其二是将REST作为dubbo RPC体系中一种协议实现，而RESTful Remoting同时涵盖了这两个面向。
 
 ## REST的优点
 
@@ -1207,3 +1207,4 @@ TODO
 * 异步调用
 * 完善gzip
 * 最大payload限制
+
