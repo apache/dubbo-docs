@@ -10,6 +10,6 @@
 * 所有配置最终都将转换为 URL [^3] 表示，并由服务提供方生成，经注册中心传递给消费方，各属性对应 URL 的参数，参见配置项一览表中的 "对应URL参数" 列。
 
 
-[^1]: XML Schema: http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+[^1]: XML Schema: http://dubbo.apache.org/schema/dubbo/dubbo.xsd
 [^2]: 注意：只有 group，interface，version 是服务的匹配条件，三者决定是不是同一个服务，其它配置项均为调优和治理参数。
 [^3]: URL 格式：`protocol://username:password@host:port/path?key=value&key=value`
