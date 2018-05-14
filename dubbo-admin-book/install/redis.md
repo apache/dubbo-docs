@@ -11,7 +11,7 @@ Redis 注册中心集群 [^2] 采用在客户端同时写入多个服务器，�
 安装:
 
 ```sh
-wget http://redis.googlecode.com/files/redis-2.4.8.tar.gz
+wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/redis/redis-2.4.8.tar.gz
 tar xzf redis-2.4.8.tar.gz
 cd redis-2.4.8
 make

@@ -11,7 +11,7 @@ Redis configuration center cluster [^2] write multiple server in client side and
 Install:
 
 ```sh
-wget http://redis.googlecode.com/files/redis-2.4.8.tar.gz
+wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/redis/redis-2.4.8.tar.gz
 tar xzf redis-2.4.8.tar.gz
 cd redis-2.4.8
 make

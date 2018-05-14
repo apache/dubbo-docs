@@ -5,7 +5,7 @@ Include: route rule, dynamic configuration, service downgrade, access control, w
 Install:
 
 ```sh
-wget http://apache.etoak.com/tomcat/tomcat-6/v6.0.35/bin/apache-tomcat-6.0.35.tar.gz
+wget https://archive.apache.org/dist/tomcat/tomcat-6/v6.0.35/bin/apache-tomcat-6.0.35.tar.gz
 tar zxvf apache-tomcat-6.0.35.tar.gz
 cd apache-tomcat-6.0.35
 rm -rf webapps/ROOT
