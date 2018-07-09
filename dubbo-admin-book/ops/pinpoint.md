@@ -1,6 +1,6 @@
 # 使用Pinpoint做分布式跟踪
 
-在使用Dubbo进行服务化或者整合应用后，假设某个服务后台日志显示有异常，这个服务又被多个应用调用的情况下，我们通常很难判断是哪个应用调用的，问题的起因是什么，因此我们需要一套分布式跟踪系统来快速定位问题，Pinpoint可以帮助我们快速定位问题（当然，解决方案也不止这一种）。
+在使用Dubbo进行服务化或者整合应用后，假设某个服务后台日志显示有异常，这个服务又被多个应用调用的情况下，我们通常很难判断是哪个应用调用的，问题的起因是什么，因此我们需要一套分布式跟踪系统来快速定位问题，Pinpoint可以帮助我们快速定位问题（当然，解决方案也不止这一种）。
 
 ## 什么是Pinpoint(摘自[Pinpoint学习笔记](https://skyao.gitbooks.io/learning-pinpoint/))
 
@@ -54,11 +54,11 @@
 
 ### 启动Pinpoint
 
-参考Pinpoint的[Quick start](http://naver.github.io/pinpoint/quickstart.html)搭建环境（不需要启动TestApp）
+参考Pinpoint的[Quick start](http://naver.github.io/pinpoint/quickstart.html)搭建环境（不需要启动TestApp）
 
 ### 准备Dubbo示例程序
 
-#### 创建API包
+#### 创建API包
 
 pom.xml
 ```xml
@@ -323,7 +323,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoConsumerController {
     @Reference(version = "${demo.service.version}",
             application = "${dubbo.application.id}",
-            url = "dubbo://<注意，这里填写具体IP>:12345")
+            url = "dubbo://<注意，这里填写具体IP>:12345")
     private HelloService helloService;
 
     @RequestMapping("/sayHello")
@@ -332,7 +332,7 @@ public class DemoConsumerController {
     }
 }
 ```
-> 直连提供者调用需要填写具体IP地址，如果写localhost也可以，但是会被Pinpoint额外识别为一个未知服务
+> 直连提供者调用需要填写具体IP地址，如果写localhost也可以，但是会被Pinpoint额外识别为一个未知服务
 
 2. 编写 Spring Boot 引导程序（Web 应用）：
 ```java
@@ -396,17 +396,17 @@ java -jar -javaagent:$AGENT_PATH/pinpoint-bootstrap-$VERSION.jar -Dpinpoint.agen
 
 ## 使用Pinpoint快速定位问题
 
-### 首页
+### 首页
 
 ![/admin-guide/images/pinpoint-home.png](../sources/images/pinpoint-home.png)
 
 > 这里的用户请求是请求DubboProvider数量的双倍，原因是记录了favicon.ico图标请求导致的
 
-### 调用树
+### 调用树
 
 ![/admin-guide/images/pinpoint-calltree.png](../sources/images/pinpoint-calltree.png)
 
-### 深入跟踪
+### 深入跟踪
 
 ![/admin-guide/images/pinpoint-mixedview.png](../sources/images/pinpoint-mixedview.png)
 
