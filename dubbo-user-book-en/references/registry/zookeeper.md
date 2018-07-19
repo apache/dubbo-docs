@@ -1,13 +1,13 @@
 # Zookeeper Registry Server
 
-[Zookeeper](http://zookeeper.apache.org) is the child project of apache hadoop. Since it offers tree-like directory service and supports change notification, it's suitable to use it as dubbo's registry server. It's a field-proven product, therefore it's recommended to use it in the production environment. [^1]
+[Zookeeper](http://zookeeper.apache.org) is a child project of [Apache Hadoop](http://hadoop.apache.org). Since it offers tree-like directory service and supports change notification, it's suitable to use it as dubbo's registry server. It's a field-proven product, therefore it's recommended to use it in the production environment. [^1]
 
 ![/user-guide/images/zookeeper.jpg](../../sources/images/zookeeper.jpg)
 
 Description on registration procedure:
 
 * When service provider boots up: write service URL address under directory `/dubbo/com.foo.BarService/providers`
-* When service consumer boots up: subscribe to `/dubbo/com.foo.BarService/providers` for provider's URL addresses. At the same time, write consumer's URL address under `/dubbo/com.foo.BarService/providers`.
+* When service consumer boots up: subscribe to `/dubbo/com.foo.BarService/providers` for provider's URL addresses. At the same time, write consumer's URL address under `/dubbo/com.foo.BarService/consumers`.
 * When monitor center boots up: subscribe to `/dubbo/com.foo.BarService` for the URL addresses from all providers and consumers.
 
 The following abilities are supported:

@@ -129,5 +129,5 @@ public class Consumer {
 
 
 [^1]: The interface needs to be packaged separately, shared by the service provider and the consumer
-[^2]: Hidden realization of service consumer
+[^2]: Hidden implementation of service consumer
 [^3]: IoC injection can also be used
