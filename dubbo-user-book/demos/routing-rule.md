@@ -134,6 +134,6 @@ registry.register(URL.valueOf("condition://0.0.0.0/com.foo.BarService?category=r
 ```
 
 [^1]: `2.2.0` 以上版本支持
-[^2]: 路由规则扩展点：[路由扩展](http://dubbo.apache.org/books/dubbo-dev-book/impls/router.html)
+[^2]: 路由规则扩展点：[路由扩展](../../dubbo-dev-book/impls/router.md)
 [^3]: 注意：一个服务只能有一条白名单规则，否则两条规则交叉，就都被筛选掉了
 [^4]: 注意：脚本没有沙箱约束，可执行任意代码，存在后门风险

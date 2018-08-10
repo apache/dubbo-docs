@@ -14,7 +14,7 @@ The relationship between nodes:
 
 ## Cluster fault-tolerant mode
 
-You can expand the cluster fault tolerance strategy, see:[Cluster expansion](http://dubbo.apache.org/books/dubbo-dev-book-en/impls/cluster.html)
+You can expand the cluster fault tolerance strategy, see:[Cluster expansion](../../dubbo-dev-book-en/impls/cluster.md)
 
 ## Failover Cluster
 

@@ -91,5 +91,5 @@ Simple Monitor 采用磁盘存储统计信息，请注意安装机器的磁盘�
 
 charts 目录必须放在 `jetty.directory` 下，否则页面上访问不了。
 
-[^1]: 请参考 [Telnet 命令参考手册](http://dubbo.apache.org/books/dubbo-user-book/references/telnet.html)
+[^1]: 请参考 [Telnet 命令参考手册](../../dubbo-user-book/references/telnet.md)
 

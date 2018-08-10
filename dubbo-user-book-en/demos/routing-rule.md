@@ -134,6 +134,6 @@ Routing rules that base on script engine is as follow：
 ```
 
 [^1]: Support since `2.2.0`   
-[^2]: Routing Rules Extension Point: [Route Extension](http://dubbo.apache.org/books/dubbo-dev-book-en/impls/router.html)   
+[^2]: Routing Rules Extension Point: [Route Extension](../../dubbo-dev-book-en/impls/router.md)   
 [^3]: Note: A service can only have one whitelist rule, otherwise the two rules will be filtered out.  
 [^4]: Note: Scripts have no sandbox constraints, can execute arbitrary code, and poses a backdoor risk.  
