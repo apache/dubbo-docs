@@ -14,12 +14,12 @@ Or:
 echo status | nc -i 1 localhost 20880
 ```
 
-It is possible to extend command `status` to check more resources, pls. refer to [extension references](http://dubbo.apache.org/books/dubbo-dev-book-en/impls/status-checker.html) for more details.
+It is possible to extend command `status` to check more resources, pls. refer to [extension references](../../dubbo-dev-book-en/impls/status-checker.md) for more details.
 
 ## Supported Commands
 
 The built-in telnet commands are listed below. Furthermore, it is possible to extend telnet commands, pls. refer to 
-[extend telnet command](http://dubbo.apache.org/books/dubbo-dev-book/impls/telnet-handler.html) for more details.
+[extend telnet command](../../dubbo-dev-book-en/impls/telnet-handler.md) for more details.
 
 ### `ls`
 

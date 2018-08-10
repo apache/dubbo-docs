@@ -75,4 +75,4 @@ Or:
 echo status | nc -i 1 127.0.0.1 9090
 ```
 
-[^1]: Please refer to [Telnet command manual](http://dubbo.apache.org/books/dubbo-user-book-en/references/telnet.html)
+[^1]: Please refer to [Telnet command manual](../../dubbo-user-book-en/references/telnet.md)

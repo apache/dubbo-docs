@@ -7,7 +7,7 @@ If you don't want to use the Spring configuration, you can call it by [the way o
 
 ## Service provider
 
-Complete installation steps, see：[Provider demo installation](http://dubbo.apache.org/books/dubbo-admin-book-en/install/provider-demo.html)
+Complete installation steps, see：[Provider demo installation](../dubbo-admin-book-en/install/provider-demo.md)
 
 ### Defining service interfaces
 
@@ -84,7 +84,7 @@ public class Provider {
 
 ## Service consumer
 
-Complete installation steps, see : [Consumer demo installation](http://dubbo.apache.org/books/dubbo-admin-book-en/install/consumer-demo.html)
+Complete installation steps, see : [Consumer demo installation](../dubbo-admin-book-en/install/consumer-demo.md)
 
 ### Using the Spring configuration to reference a remote service 
 
