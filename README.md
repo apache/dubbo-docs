@@ -1,3 +1,5 @@
+> Now dubbo docs are hosted under [dubbo-website](https://github.com/apache/incubator-dubbo-website). Any changes need to be taken place at there.
+
 # A collection of Apache Dubbo (incubating) docs
 
 * [Dubbo user manual(English)](http://dubbo.apache.org/books/dubbo-user-book-en/) or [Dubbo用户手册(中文)](http://dubbo.apache.org/books/dubbo-user-book/) - Describe how to use Dubbo and all features of Dubbo concretely.
