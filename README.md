@@ -1,4 +1,5 @@
-> Now dubbo docs are hosted under [dubbo-website](https://github.com/apache/incubator-dubbo-website). Any changes need to be taken place at there.
+## This projected has been marked as deprecated.
+Now dubbo docs are hosted under [dubbo-website](https://github.com/apache/incubator-dubbo-website). Any changes need to be taken place at there.
 
 # A collection of Apache Dubbo (incubating) docs
 
