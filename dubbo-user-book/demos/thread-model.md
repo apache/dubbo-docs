@@ -15,7 +15,7 @@
 <dubbo:protocol name="dubbo" dispatcher="all" threadpool="fixed" threads="100" />
 ```
 
-调度程序
+## 调度程序
 
 * `all` 所有消息都派发到线程池，包括请求，响应，连接事件，断开事件，心跳等。
 * `direct` 所有消息都不派发到线程池，全部在 IO 线程上直接执行。
@@ -23,12 +23,14 @@
 * `execution` 只请求消息派发到线程池，不含响应，响应和其它连接断开事件，心跳等消息，直接在 IO 线程上执行。
 * `connection` 在 IO 线程上，将连接断开事件放入队列，有序逐个执行，其它消息派发到线程池。
 
-线程池
+## 线程池
 
 * `fixed` 固定大小线程池，启动时建立线程，不关闭，一直持有。(缺省)
 * `cached` 缓存线程池，空闲一分钟自动删除，需要时重建。
 * `limited` 可伸缩线程池，但池中的线程数只会增长不会收缩。只增长不收缩的目的是为了避免收缩时突然来了大流量引起的性能问题。
 * `eager` 优先创建`Worker`线程池。在任务数量大于`corePoolSize`但是小于`maximumPoolSize`时，优先创建`Worker`来处理任务。当任务数量大于`maximumPoolSize`时，将任务放入阻塞队列中。阻塞队列充满时抛出`RejectedExecutionException`。(相比于`cached`:`cached`在任务数量超过`maximumPoolSize`时直接抛出异常而不是将任务放入阻塞队列)
+
+## 线程调用图
 
 以默认的配置为例，给出一张服务调用的线程模型图：
 ![dubbo-protocol](../sources/images/thread-model.png)
@@ -48,7 +50,7 @@
 ### 通信流程
 从线程模型的角度来看通信流程。（以同步调用为例）
 
-* consumer端用户线程在发出请求之前会先创建一个DefaultFuture对象；并将requestID作为DefaultFuture对象的key存储在```Map<Long, DefaultFuture> FUTURES```中（注意：每一个requestID是一个请求的唯一标识，最后相应的响应Response的responseID就等于这个requestID）
+* consumer端用户线程在发出请求之前会先创建一个DefaultFuture对象；并将requestID作为DefaultFuture对象的key存储在```Map<Long, DefaultFuture> FUTURES```中（注意：每一个requestID是一个请求的唯一标识，最后相应的响应Response的responseID就等于这个requestID）；
 * 之后调用netty编码并发出请求，然后马上调用DefaultFuture#get进行阻塞等待（阻塞等待response不为空的条件）；
 * provider端netty-server接收到请求后，解码，然后交由server线程池进行处理；
 * server线程池处理完成之后，调用netty编码并发送响应消息给consumer端；
