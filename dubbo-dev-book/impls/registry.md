@@ -149,7 +149,7 @@ src
     |-java
         |-com
             |-xxx
-                |-XxxRegistryFactoryjava (实现RegistryFactory接口)
+                |-XxxRegistryFactory.java (实现RegistryFactory接口)
                 |-XxxRegistry.java (实现Registry接口)
     |-resources
         |-META-INF

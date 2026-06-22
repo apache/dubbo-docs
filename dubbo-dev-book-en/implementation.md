@@ -10,7 +10,7 @@ All Dubbo tags are parsed by `DubboBeanDefinitionParser`, based on one to one at
 
 Transfer Bean object to URL, and transfer all attributes of Bean to URL parameters when `ServiceConfig.export()` or `ReferenceConfig.get()` initialization.
 
-Then pase URL to [Protocol extension point](./impls/protocol.md), based on [Extension point adaptive mechanism](./SPI.md) of extension point, processing service exposure or reference for different protocols according to URL protocol header.
+Then pass URL to [Protocol extension point](./impls/protocol.md), based on [Extension point adaptive mechanism](./SPI.md) of extension point, processing service exposure or reference for different protocols according to URL protocol header.
 
 ### Service Exposure
 
@@ -56,7 +56,7 @@ Based on `ProtocolFilterWrapper` class, make all `Filter` as chain, call the rea
 
 Based on `ProtocolListenerWrapper` class, make all `InvokerListener` and `ExporterListener` as list, perform call back before and after exposure and reference.
 
-All additional functions would be implementated by `Filter`, including Monitor.
+All additional functions would be implemented by `Filter`, including Monitor.
 
 ## RPC details
 
@@ -72,11 +72,11 @@ The key of Dubbo processing service exposure is the process of converting `Invok
 
 #### Dubbo implementation
 
-The transformation from `Invoker` of Dubbo protocol to `Exporter` takes place in the `export` method of `DubboProtocol` class, it mainly opens the socket to listen service and receive all kinds of requests sent by the client, and the communication details are implementated by Dubbo itself.
+The transformation from `Invoker` of Dubbo protocol to `Exporter` takes place in the `export` method of `DubboProtocol` class, it mainly opens the socket to listen service and receive all kinds of requests sent by the client, and the communication details are implemented by Dubbo itself.
 
 #### RMI implementation
 
-The transformation from `Invoker` of RMI protocol to `Exporter` takes place in the `export` method of `RmiProtocol` class, the RMI service is implementated by Spring, Dubbo or JDK, and the communication details are implementated by JDK, which saves a lot of work.
+The transformation from `Invoker` of RMI protocol to `Exporter` takes place in the `export` method of `RmiProtocol` class, the RMI service is implemented by Spring, Dubbo or JDK, and the communication details are implemented by JDK, which saves a lot of work.
 
 ### The detail process of serving service for service consumer
 
@@ -115,7 +115,7 @@ public class DemoClientAction {
 }
 ```
 
-The `DemoService` in above code is the proxy of service consumer in above image, user can call `Invoker` [^5] which implementate the real RPC by the proxy.
+The `DemoService` in above code is the proxy of service consumer in above image, user can call `Invoker` [^5] which implements the real RPC by the proxy.
 
 Service provider code:
 
@@ -128,7 +128,7 @@ public class DemoServiceImpl implements DemoService {
 }
 ```
 
-The above class would be encapsulated to be a `AbstractProxyInvoker` instance, and create a new `Exporter` instance, then find corresponding `Exporter` instance and call its corresponding `AbstractProxyInvoker` instance when network communication layer recieve request, so that real call service provider code. There are some other `Invoker` classes, but the above 2 are the most important.
+The above class would be encapsulated to be a `AbstractProxyInvoker` instance, and create a new `Exporter` instance, then find corresponding `Exporter` instance and call its corresponding `AbstractProxyInvoker` instance when network communication layer receive request, so that real call service provider code. There are some other `Invoker` classes, but the above 2 are the most important.
 
 ## Remote communication details 
 
@@ -140,7 +140,7 @@ The above class would be encapsulated to be a `AbstractProxyInvoker` instance, a
 
 ![/dev-guide/images/dubbo-protocol.jpg](sources/images/dubbo-protocol.jpg)
 
-* Dispather: `all`, `direct`, `message`, `execution`, `connection`
+* Dispatcher: `all`, `direct`, `message`, `execution`, `connection`
 * ThreadPool: `fixed`, `cached`
 
 
